@@ -9,24 +9,24 @@ EOF
 }
 
 variable "http_scheme" {
-  type    = string
-  default = "HTTP"
+  type        = string
+  default     = "HTTP"
   description = <<EOF
 Scheme to use for connecting to the host (HTTP or HTTPS). Defaults to "HTTP".
 EOF
 }
 
 variable "http_path" {
-  type    = string
-  default = "/"
+  type        = string
+  default     = "/"
   description = <<EOF
 Path to access on the HTTP server. Defaults to "/".
 EOF
 }
 
 variable "http_port" {
-  type    = number
-  default = null
+  type        = number
+  default     = null
   description = <<EOF
 Name or number of the port to access on the container. Number must be in the range 1 to 65535. Defaults to app's `container_port`.
 EOF
@@ -102,7 +102,7 @@ EOF
 
 variable "termination_grace_period" {
   type        = number
-  default     = null
+  default     = 30
   description = <<EOF
 Configure a grace period for the kubelet to wait between triggering a shut down of the failed container, and then forcing the container runtime to stop that container. The default is to inherit the Pod-level value for terminationGracePeriodSeconds (30 seconds if not specified), and the minimum value is 1. See probe-level [terminationGracePeriodSeconds](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#probe-level-terminationgraceperiodseconds) for more detail.
 EOF
