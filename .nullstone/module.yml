@@ -1,0 +1,15 @@
+org_name: nullstone
+name: k8s-http-healthcheck
+friendly_name: HTTP Healthcheck
+description: Adds an HTTP healthcheck to a Kubernetes app using a readiness probe.
+category: capability
+subcategory: ingress
+provider_types:
+    - aws
+    - gcp
+platform: k8s
+subplatform: ""
+type: ""
+appCategories:
+    - container
+is_public: true
